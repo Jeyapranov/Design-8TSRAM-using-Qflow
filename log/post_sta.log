@@ -1,0 +1,766 @@
+Qflow static timing analysis logfile created on Tue Jul 8 10:40:09 PM IST 2025
+Converting qrouter output to vesta delay format
+Running rc2dly -r sram8t.rc -l /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib -d sram8t.dly
+Converting qrouter output to SPEF delay format
+Running rc2dly -D : -r sram8t.rc -l /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib -d sram8t.spef
+Converting qrouter output to SDF delay format
+Running rc2dly -r sram8t.rc -l /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib -d sram8t.sdf
+Running vesta static timing analysis with back-annotated extracted wire delays
+vesta -c -d sram8t.dly --long sram8t.rtlnopwr.v /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.3.17
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Parsing module "sram8t"
+Lib read /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib:  Processed 6142 lines.
+Verilog netlist read:  Processed 759 lines.
+Number of paths analyzed:  144
+
+Top 20 maximum delay paths:
+Path DFFPOSX1_83/CLK to DFFSR_3/D delay 790.822 ps
+      3.8 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_83/CLK
+    227.8 ps   mem_10__2_: DFFPOSX1_83/Q ->    INVX1_35/A
+    344.4 ps        _135_:    INVX1_35/Y ->   OAI21X1_6/B
+    456.1 ps        _137_:   OAI21X1_6/Y ->    NOR3X1_8/A
+    556.2 ps        _138_:    NOR3X1_8/Y ->   AOI21X1_3/A
+    640.8 ps       _0__2_:   AOI21X1_3/Y ->     DFFSR_3/D
+
+   clock skew at destination = 34.4701
+   setup at destination = 115.555
+
+Path DFFPOSX1_66/CLK to DFFSR_2/D delay 777.046 ps
+      1.0 ps  clk_bF_buf1:  CLKBUF1_10/Y -> DFFPOSX1_66/CLK
+    221.7 ps    mem_8__1_: DFFPOSX1_66/Q ->   NAND3X1_7/A
+    325.9 ps        _125_:   NAND3X1_7/Y ->   NAND3X1_8/A
+    449.1 ps        _127_:   NAND3X1_8/Y ->    NOR3X1_7/B
+    550.3 ps        _128_:    NOR3X1_7/Y ->   AOI21X1_2/B
+    623.7 ps       _0__1_:   AOI21X1_2/Y ->     DFFSR_2/D
+
+   clock skew at destination = 41.0069
+   setup at destination = 112.384
+
+Path DFFPOSX1_68/CLK to DFFSR_4/D delay 773.37 ps
+      2.4 ps  clk_bF_buf1:  CLKBUF1_10/Y -> DFFPOSX1_68/CLK
+    221.8 ps    mem_8__3_: DFFPOSX1_68/Q ->  NAND3X1_14/A
+    324.5 ps        _169_:  NAND3X1_14/Y ->  NAND3X1_15/A
+    450.6 ps        _171_:  NAND3X1_15/Y ->   NOR3X1_11/B
+    551.8 ps        _172_:   NOR3X1_11/Y ->   AOI21X1_4/B
+    621.7 ps       _0__3_:   AOI21X1_4/Y ->     DFFSR_4/D
+
+   clock skew at destination = 41.0069
+   setup at destination = 110.688
+
+Path DFFPOSX1_9/CLK to DFFSR_1/D delay 772.564 ps
+      1.1 ps  clk_bF_buf3:  CLKBUF1_8/Y -> DFFPOSX1_9/CLK
+    221.9 ps    mem_1__0_: DFFPOSX1_9/Q ->  NAND3X1_2/A
+    324.5 ps         _88_:  NAND3X1_2/Y ->  NAND3X1_3/A
+    441.3 ps         _91_:  NAND3X1_3/Y ->   NOR3X1_5/A
+    546.9 ps        _105_:   NOR3X1_5/Y ->  AOI21X1_1/B
+    619.0 ps       _0__0_:  AOI21X1_1/Y ->    DFFSR_1/D
+
+   clock skew at destination = 41.7183
+   setup at destination = 111.844
+
+Path DFFPOSX1_61/CLK to DFFSR_5/D delay 761.955 ps
+      4.9 ps  clk_bF_buf2:   CLKBUF1_9/Y -> DFFPOSX1_61/CLK
+    222.6 ps    mem_7__4_: DFFPOSX1_61/Q ->  NAND3X1_16/A
+    331.4 ps        _186_:  NAND3X1_16/Y ->  NAND3X1_18/A
+    450.1 ps        _189_:  NAND3X1_18/Y ->   NOR3X1_13/B
+    551.0 ps        _198_:   NOR3X1_13/Y ->   AOI21X1_5/B
+    621.2 ps       _0__4_:   AOI21X1_5/Y ->     DFFSR_5/D
+
+   clock skew at destination = 25.3694
+   setup at destination = 115.344
+
+Path DFFPOSX1_71/CLK to DFFSR_7/D delay 757.344 ps
+      0.5 ps  clk_bF_buf1:  CLKBUF1_10/Y -> DFFPOSX1_71/CLK
+    221.7 ps    mem_8__6_: DFFPOSX1_71/Q ->  NAND3X1_26/A
+    324.4 ps        _239_:  NAND3X1_26/Y ->  NAND3X1_27/A
+    445.0 ps        _241_:  NAND3X1_27/Y ->   NOR3X1_17/B
+    547.2 ps        _242_:   NOR3X1_17/Y ->   AOI21X1_7/B
+    617.5 ps       _0__6_:   AOI21X1_7/Y ->     DFFSR_7/D
+
+   clock skew at destination = 24.4038
+   setup at destination = 115.432
+
+Path DFFPOSX1_14/CLK to DFFSR_6/D delay 755.118 ps
+      1.3 ps  clk_bF_buf3:   CLKBUF1_8/Y -> DFFPOSX1_14/CLK
+    221.8 ps    mem_1__5_: DFFPOSX1_14/Q ->  NAND3X1_21/A
+    324.4 ps        _210_:  NAND3X1_21/Y ->  NAND3X1_22/A
+    439.9 ps        _212_:  NAND3X1_22/Y ->   NOR3X1_15/A
+    545.0 ps        _220_:   NOR3X1_15/Y ->   AOI21X1_6/B
+    614.8 ps       _0__5_:   AOI21X1_6/Y ->     DFFSR_6/D
+
+   clock skew at destination = 25.1152
+   setup at destination = 115.195
+
+Path DFFPOSX1_64/CLK to DFFSR_8/D delay 744.309 ps
+      2.1 ps  clk_bF_buf4:   CLKBUF1_7/Y -> DFFPOSX1_64/CLK
+    222.4 ps    mem_7__7_: DFFPOSX1_64/Q ->  NAND3X1_28/A
+    328.6 ps        _252_:  NAND3X1_28/Y ->  NAND3X1_30/B
+    436.9 ps        _255_:  NAND3X1_30/Y ->   NOR3X1_19/B
+    537.9 ps        _263_:   NOR3X1_19/Y ->   AOI21X1_8/B
+    606.8 ps       _0__7_:   AOI21X1_8/Y ->     DFFSR_8/D
+
+   clock skew at destination = 21.5074
+   setup at destination = 115.979
+
+Path DFFPOSX1_83/CLK to DFFPOSX1_83/D delay 640.538 ps
+      3.8 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_83/CLK
+    227.8 ps   mem_10__2_: DFFPOSX1_83/Q ->    INVX1_35/A
+    344.2 ps        _135_:    INVX1_35/Y ->   MUX2X1_36/A
+    441.7 ps       _2__2_:   MUX2X1_36/Y -> DFFPOSX1_83/D
+
+   clock skew at destination = 0
+   setup at destination = 198.887
+
+Path DFFPOSX1_81/CLK to DFFPOSX1_81/D delay 622.05 ps
+      3.7 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_81/CLK
+    215.8 ps   mem_10__0_: DFFPOSX1_81/Q ->    INVX1_25/A
+    328.0 ps         _75_:    INVX1_25/Y ->   MUX2X1_34/A
+    423.8 ps       _2__0_:   MUX2X1_34/Y -> DFFPOSX1_81/D
+
+   clock skew at destination = 0
+   setup at destination = 198.258
+
+Path DFFPOSX1_58/CLK to DFFPOSX1_58/D delay 618.695 ps
+      3.9 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_58/CLK
+    227.0 ps    mem_7__1_: DFFPOSX1_58/Q ->    INVX1_30/A
+    339.5 ps        _110_:    INVX1_30/Y ->   MUX2X1_59/B
+    423.7 ps      _14__1_:   MUX2X1_59/Y -> DFFPOSX1_58/D
+
+   clock skew at destination = 0
+   setup at destination = 194.995
+
+Path DFFPOSX1_26/CLK to DFFPOSX1_26/D delay 617.794 ps
+      4.2 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_26/CLK
+    227.7 ps    mem_3__1_: DFFPOSX1_26/Q ->    INVX1_28/A
+    336.1 ps        _107_:    INVX1_28/Y ->   MUX2X1_89/A
+    422.9 ps      _10__1_:   MUX2X1_89/Y -> DFFPOSX1_26/D
+
+   clock skew at destination = 0
+   setup at destination = 194.899
+
+Path DFFPOSX1_63/CLK to DFFPOSX1_63/D delay 615.701 ps
+      2.9 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_63/CLK
+    227.0 ps    mem_7__6_: DFFPOSX1_63/Q ->    INVX1_52/A
+    337.7 ps        _225_:    INVX1_52/Y ->   MUX2X1_63/B
+    421.0 ps      _14__6_:   MUX2X1_63/Y -> DFFPOSX1_63/D
+
+   clock skew at destination = 0
+   setup at destination = 194.702
+
+Path DFFPOSX1_28/CLK to DFFPOSX1_28/D delay 611.149 ps
+      0.8 ps  clk_bF_buf0:  CLKBUF1_11/Y -> DFFPOSX1_28/CLK
+    223.6 ps    mem_3__3_: DFFPOSX1_28/Q ->    INVX1_36/A
+    324.9 ps        _152_:    INVX1_36/Y ->   MUX2X1_91/A
+    415.1 ps      _10__3_:   MUX2X1_91/Y -> DFFPOSX1_28/D
+
+   clock skew at destination = 0
+   setup at destination = 196.017
+
+Path DFFPOSX1_108/CLK to DFFPOSX1_108/D delay 610.797 ps
+      1.8 ps  clk_bF_buf0:   CLKBUF1_11/Y -> DFFPOSX1_108/CLK
+    227.4 ps   mem_13__3_: DFFPOSX1_108/Q ->     INVX1_37/A
+    334.2 ps        _154_:     INVX1_37/Y ->    MUX2X1_23/B
+    416.5 ps       _5__3_:    MUX2X1_23/Y -> DFFPOSX1_108/D
+
+   clock skew at destination = 0
+   setup at destination = 194.326
+
+Path DFFPOSX1_62/CLK to DFFPOSX1_62/D delay 604.062 ps
+      1.2 ps  clk_bF_buf7:   CLKBUF1_4/Y -> DFFPOSX1_62/CLK
+    221.1 ps    mem_7__5_: DFFPOSX1_62/Q ->    INVX1_48/A
+    326.8 ps        _203_:    INVX1_48/Y ->   MUX2X1_62/B
+    409.7 ps      _14__5_:   MUX2X1_62/Y -> DFFPOSX1_62/D
+
+   clock skew at destination = 0
+   setup at destination = 194.4
+
+Path DFFPOSX1_30/CLK to DFFPOSX1_30/D delay 601.195 ps
+      1.7 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_30/CLK
+    214.7 ps    mem_3__5_: DFFPOSX1_30/Q ->    INVX1_46/A
+    318.0 ps        _200_:    INVX1_46/Y ->   MUX2X1_93/A
+    405.9 ps      _10__5_:   MUX2X1_93/Y -> DFFPOSX1_30/D
+
+   clock skew at destination = 0
+   setup at destination = 195.263
+
+Path DFFPOSX1_111/CLK to DFFPOSX1_111/D delay 593.602 ps
+      4.1 ps  clk_bF_buf5:    CLKBUF1_6/Y -> DFFPOSX1_111/CLK
+    215.9 ps   mem_13__6_: DFFPOSX1_111/Q ->     INVX1_51/A
+    316.7 ps        _224_:     INVX1_51/Y ->    MUX2X1_25/B
+    399.3 ps       _5__6_:    MUX2X1_25/Y -> DFFPOSX1_111/D
+
+   clock skew at destination = 0
+   setup at destination = 194.293
+
+Path DFFPOSX1_88/CLK to DFFPOSX1_88/D delay 592.48 ps
+      1.0 ps  clk_bF_buf7:   CLKBUF1_4/Y -> DFFPOSX1_88/CLK
+    209.9 ps   mem_10__7_: DFFPOSX1_88/Q ->    INVX1_55/A
+    309.2 ps        _246_:    INVX1_55/Y ->   MUX2X1_41/A
+    397.3 ps       _2__7_:   MUX2X1_41/Y -> DFFPOSX1_88/D
+
+   clock skew at destination = 0
+   setup at destination = 195.185
+
+Path DFFPOSX1_86/CLK to DFFPOSX1_86/D delay 588.92 ps
+      2.7 ps  clk_bF_buf10:   CLKBUF1_1/Y -> DFFPOSX1_86/CLK
+    207.3 ps    mem_10__5_: DFFPOSX1_86/Q ->    INVX1_49/A
+    307.7 ps         _205_:    INVX1_49/Y ->   MUX2X1_39/A
+    394.3 ps        _2__5_:   MUX2X1_39/Y -> DFFPOSX1_86/D
+
+   clock skew at destination = 0
+   setup at destination = 194.631
+
+Computed maximum clock frequency (zero margin) = 1264.51 MHz
+-----------------------------------------
+
+Number of paths analyzed:  144
+
+Top 20 minimum delay paths:
+Path DFFPOSX1_85/CLK to DFFPOSX1_85/D delay 229.771 ps
+      1.9 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_85/CLK
+     87.5 ps   mem_10__4_: DFFPOSX1_85/Q ->    INVX1_41/A
+    172.3 ps        _177_:    INVX1_41/Y ->   MUX2X1_38/A
+    233.1 ps       _2__4_:   MUX2X1_38/Y -> DFFPOSX1_85/D
+
+   clock skew at destination = 0
+   hold at destination = -3.34015
+
+Path DFFPOSX1_25/CLK to DFFPOSX1_25/D delay 229.925 ps
+      1.5 ps  clk_bF_buf0:  CLKBUF1_11/Y -> DFFPOSX1_25/CLK
+     87.3 ps    mem_3__0_: DFFPOSX1_25/Q ->    INVX1_20/A
+    173.2 ps         _58_:    INVX1_20/Y ->   MUX2X1_88/A
+    233.3 ps      _10__0_:   MUX2X1_88/Y -> DFFPOSX1_25/D
+
+   clock skew at destination = 0
+   hold at destination = -3.39645
+
+Path DFFPOSX1_80/CLK to DFFPOSX1_80/D delay 231.468 ps
+      5.3 ps  clk_bF_buf2:   CLKBUF1_9/Y -> DFFPOSX1_80/CLK
+     87.3 ps    mem_9__7_: DFFPOSX1_80/Q ->    INVX1_56/A
+    173.5 ps        _248_:    INVX1_56/Y ->   MUX2X1_49/A
+    234.8 ps      _16__7_:   MUX2X1_49/Y -> DFFPOSX1_80/D
+
+   clock skew at destination = 0
+   hold at destination = -3.30169
+
+Path DFFPOSX1_77/CLK to DFFPOSX1_77/D delay 232.205 ps
+      0.6 ps  clk_bF_buf10:   CLKBUF1_1/Y -> DFFPOSX1_77/CLK
+     87.6 ps     mem_9__4_: DFFPOSX1_77/Q ->    INVX1_44/A
+    175.3 ps         _181_:    INVX1_44/Y ->   MUX2X1_46/A
+    235.6 ps       _16__4_:   MUX2X1_46/Y -> DFFPOSX1_77/D
+
+   clock skew at destination = 0
+   hold at destination = -3.37667
+
+Path DFFPOSX1_31/CLK to DFFPOSX1_31/D delay 232.68 ps
+      2.3 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_31/CLK
+     87.0 ps    mem_3__6_: DFFPOSX1_31/Q ->    INVX1_50/A
+    175.7 ps        _222_:    INVX1_50/Y ->   MUX2X1_94/A
+    236.0 ps      _10__6_:   MUX2X1_94/Y -> DFFPOSX1_31/D
+
+   clock skew at destination = 0
+   hold at destination = -3.36244
+
+Path DFFPOSX1_24/CLK to DFFPOSX1_24/D delay 232.768 ps
+      2.6 ps  clk_bF_buf4:   CLKBUF1_7/Y -> DFFPOSX1_24/CLK
+     87.0 ps    mem_2__7_: DFFPOSX1_24/Q ->     INVX1_1/A
+    175.6 ps         _17_:     INVX1_1/Y ->    MUX2X1_1/A
+    236.1 ps       _9__7_:    MUX2X1_1/Y -> DFFPOSX1_24/D
+
+   clock skew at destination = 0
+   hold at destination = -3.34777
+
+Path DFFPOSX1_84/CLK to DFFPOSX1_84/D delay 232.783 ps
+      1.6 ps  clk_bF_buf0:  CLKBUF1_11/Y -> DFFPOSX1_84/CLK
+     87.3 ps   mem_10__3_: DFFPOSX1_84/Q ->    INVX1_39/A
+    175.9 ps        _157_:    INVX1_39/Y ->   MUX2X1_37/A
+    236.1 ps       _2__3_:   MUX2X1_37/Y -> DFFPOSX1_84/D
+
+   clock skew at destination = 0
+   hold at destination = -3.36407
+
+Path DFFPOSX1_82/CLK to DFFPOSX1_82/D delay 232.929 ps
+      2.7 ps  clk_bF_buf10:   CLKBUF1_1/Y -> DFFPOSX1_82/CLK
+     87.3 ps    mem_10__1_: DFFPOSX1_82/Q ->    INVX1_31/A
+    174.8 ps         _112_:    INVX1_31/Y ->   MUX2X1_35/A
+    236.2 ps        _2__1_:   MUX2X1_35/Y -> DFFPOSX1_82/D
+
+   clock skew at destination = 0
+   hold at destination = -3.28099
+
+Path DFFPOSX1_87/CLK to DFFPOSX1_87/D delay 233.153 ps
+      1.6 ps  clk_bF_buf10:   CLKBUF1_1/Y -> DFFPOSX1_87/CLK
+     87.0 ps    mem_10__6_: DFFPOSX1_87/Q ->    INVX1_53/A
+    176.0 ps         _227_:    INVX1_53/Y ->   MUX2X1_40/A
+    236.5 ps        _2__6_:   MUX2X1_40/Y -> DFFPOSX1_87/D
+
+   clock skew at destination = 0
+   hold at destination = -3.33317
+
+Path DFFPOSX1_105/CLK to DFFPOSX1_105/D delay 233.185 ps
+      1.2 ps  clk_bF_buf0:   CLKBUF1_11/Y -> DFFPOSX1_105/CLK
+     87.2 ps   mem_13__0_: DFFPOSX1_105/Q ->     INVX1_21/A
+    171.9 ps         _63_:     INVX1_21/Y ->    MUX2X1_20/B
+    236.4 ps       _5__0_:    MUX2X1_20/Y -> DFFPOSX1_105/D
+
+   clock skew at destination = 0
+   hold at destination = -3.23144
+
+Path DFFPOSX1_21/CLK to DFFPOSX1_21/D delay 233.207 ps
+      2.5 ps  clk_bF_buf4:   CLKBUF1_7/Y -> DFFPOSX1_21/CLK
+     87.3 ps    mem_2__4_: DFFPOSX1_21/Q ->    INVX1_42/A
+    175.8 ps        _178_:    INVX1_42/Y ->  MUX2X1_100/A
+    236.5 ps       _9__4_:  MUX2X1_100/Y -> DFFPOSX1_21/D
+
+   clock skew at destination = 0
+   hold at destination = -3.33528
+
+Path DFFPOSX1_88/CLK to DFFPOSX1_88/D delay 234.43 ps
+      1.0 ps  clk_bF_buf7:   CLKBUF1_4/Y -> DFFPOSX1_88/CLK
+     87.8 ps   mem_10__7_: DFFPOSX1_88/Q ->    INVX1_55/A
+    175.9 ps        _246_:    INVX1_55/Y ->   MUX2X1_41/A
+    237.7 ps       _2__7_:   MUX2X1_41/Y -> DFFPOSX1_88/D
+
+   clock skew at destination = 0
+   hold at destination = -3.25372
+
+Path DFFPOSX1_107/CLK to DFFPOSX1_107/D delay 234.745 ps
+      2.2 ps  clk_bF_buf0:   CLKBUF1_11/Y -> DFFPOSX1_107/CLK
+     87.0 ps   mem_13__2_: DFFPOSX1_107/Q ->     INVX1_33/A
+    173.1 ps        _132_:     INVX1_33/Y ->    MUX2X1_22/B
+    237.9 ps       _5__2_:    MUX2X1_22/Y -> DFFPOSX1_107/D
+
+   clock skew at destination = 0
+   hold at destination = -3.20387
+
+Path DFFPOSX1_27/CLK to DFFPOSX1_27/D delay 234.779 ps
+      1.5 ps  clk_bF_buf7:   CLKBUF1_4/Y -> DFFPOSX1_27/CLK
+     87.3 ps    mem_3__2_: DFFPOSX1_27/Q ->    INVX1_32/A
+    177.1 ps        _130_:    INVX1_32/Y ->   MUX2X1_90/A
+    238.1 ps      _10__2_:   MUX2X1_90/Y -> DFFPOSX1_27/D
+
+   clock skew at destination = 0
+   hold at destination = -3.28427
+
+Path DFFPOSX1_86/CLK to DFFPOSX1_86/D delay 234.793 ps
+      2.7 ps  clk_bF_buf10:   CLKBUF1_1/Y -> DFFPOSX1_86/CLK
+     87.6 ps    mem_10__5_: DFFPOSX1_86/Q ->    INVX1_49/A
+    177.4 ps         _205_:    INVX1_49/Y ->   MUX2X1_39/A
+    238.1 ps        _2__5_:   MUX2X1_39/Y -> DFFPOSX1_86/D
+
+   clock skew at destination = 0
+   hold at destination = -3.32653
+
+Path DFFPOSX1_110/CLK to DFFPOSX1_110/D delay 235.174 ps
+      1.0 ps  clk_bF_buf5:    CLKBUF1_6/Y -> DFFPOSX1_110/CLK
+     87.4 ps   mem_13__5_: DFFPOSX1_110/Q ->     INVX1_47/A
+    173.5 ps        _202_:     INVX1_47/Y ->    MUX2X1_24/B
+    238.4 ps       _5__5_:    MUX2X1_24/Y -> DFFPOSX1_110/D
+
+   clock skew at destination = 0
+   hold at destination = -3.20169
+
+Path DFFPOSX1_28/CLK to DFFPOSX1_28/D delay 235.442 ps
+      0.8 ps  clk_bF_buf0:  CLKBUF1_11/Y -> DFFPOSX1_28/CLK
+     88.7 ps    mem_3__3_: DFFPOSX1_28/Q ->    INVX1_36/A
+    175.4 ps        _152_:    INVX1_36/Y ->   MUX2X1_91/A
+    238.6 ps      _10__3_:   MUX2X1_91/Y -> DFFPOSX1_28/D
+
+   clock skew at destination = 0
+   hold at destination = -3.14428
+
+Path DFFPOSX1_117/CLK to DFFPOSX1_117/D delay 236.509 ps
+      2.0 ps  clk_bF_buf7:    CLKBUF1_4/Y -> DFFPOSX1_117/CLK
+     87.0 ps   mem_14__4_: DFFPOSX1_117/Q ->     INVX1_40/A
+    175.4 ps        _174_:     INVX1_40/Y ->    MUX2X1_18/B
+    239.7 ps       _6__4_:    MUX2X1_18/Y -> DFFPOSX1_117/D
+
+   clock skew at destination = 0
+   hold at destination = -3.22088
+
+Path DFFPOSX1_30/CLK to DFFPOSX1_30/D delay 237.213 ps
+      1.7 ps  clk_bF_buf5:   CLKBUF1_6/Y -> DFFPOSX1_30/CLK
+     88.1 ps    mem_3__5_: DFFPOSX1_30/Q ->    INVX1_46/A
+    178.8 ps        _200_:    INVX1_46/Y ->   MUX2X1_93/A
+    240.4 ps      _10__5_:   MUX2X1_93/Y -> DFFPOSX1_30/D
+
+   clock skew at destination = 0
+   hold at destination = -3.22994
+
+Path DFFPOSX1_106/CLK to DFFPOSX1_106/D delay 237.679 ps
+      1.1 ps  clk_bF_buf7:    CLKBUF1_4/Y -> DFFPOSX1_106/CLK
+     87.3 ps   mem_13__1_: DFFPOSX1_106/Q ->     INVX1_29/A
+    175.7 ps        _109_:     INVX1_29/Y ->    MUX2X1_21/B
+    240.8 ps       _5__1_:    MUX2X1_21/Y -> DFFPOSX1_106/D
+
+   clock skew at destination = 0
+   hold at destination = -3.16669
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  280
+
+Top 20 maximum delay paths:
+Path input pin addr[3] to DFFPOSX1_59/D delay 1501.28 ps
+      0.6 ps  addr[3]:             ->    INVX1_23/A
+     67.8 ps     _66_:  INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_: NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:   INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_: NAND2X1_7/Y ->   NOR2X1_46/B
+   1100.9 ps    _318_: NOR2X1_46/Y ->   MUX2X1_60/S
+   1304.3 ps  _14__2_: MUX2X1_60/Y -> DFFPOSX1_59/D
+
+   setup at destination = 196.956
+
+Path input pin addr[3] to DFFPOSX1_58/D delay 1496.95 ps
+      0.6 ps  addr[3]:             ->    INVX1_23/A
+     67.8 ps     _66_:  INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_: NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:   INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_: NAND2X1_7/Y ->   NOR2X1_46/B
+   1100.4 ps    _318_: NOR2X1_46/Y ->   MUX2X1_59/S
+   1301.5 ps  _14__1_: MUX2X1_59/Y -> DFFPOSX1_58/D
+
+   setup at destination = 195.45
+
+Path input pin addr[3] to DFFPOSX1_57/D delay 1496.68 ps
+      0.6 ps  addr[3]:             ->    INVX1_23/A
+     67.8 ps     _66_:  INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_: NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:   INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_: NAND2X1_7/Y ->   NOR2X1_46/B
+   1100.6 ps    _318_: NOR2X1_46/Y ->   MUX2X1_58/S
+   1301.3 ps  _14__0_: MUX2X1_58/Y -> DFFPOSX1_57/D
+
+   setup at destination = 195.355
+
+Path input pin addr[3] to DFFPOSX1_63/D delay 1496.38 ps
+      0.6 ps  addr[3]:             ->    INVX1_23/A
+     67.8 ps     _66_:  INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_: NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:   INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_: NAND2X1_7/Y ->   NOR2X1_46/B
+   1100.2 ps    _318_: NOR2X1_46/Y ->   MUX2X1_63/S
+   1301.1 ps  _14__6_: MUX2X1_63/Y -> DFFPOSX1_63/D
+
+   setup at destination = 195.253
+
+Path input pin addr[3] to DFFPOSX1_62/D delay 1496.3 ps
+      0.6 ps  addr[3]:             ->    INVX1_23/A
+     67.8 ps     _66_:  INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_: NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:   INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_: NAND2X1_7/Y ->   NOR2X1_46/B
+   1099.6 ps    _318_: NOR2X1_46/Y ->   MUX2X1_62/S
+   1301.1 ps  _14__5_: MUX2X1_62/Y -> DFFPOSX1_62/D
+
+   setup at destination = 195.225
+
+Path input pin addr[3] to DFFPOSX1_60/D delay 1496.25 ps
+      0.6 ps  addr[3]:             ->    INVX1_23/A
+     67.8 ps     _66_:  INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_: NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:   INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_: NAND2X1_7/Y ->   NOR2X1_46/B
+   1100.4 ps    _318_: NOR2X1_46/Y ->   MUX2X1_61/S
+   1301.0 ps  _14__3_: MUX2X1_61/Y -> DFFPOSX1_60/D
+
+   setup at destination = 195.206
+
+Path input pin addr[3] to DFFPOSX1_61/D delay 1486.7 ps
+      0.6 ps  addr[3]:              ->    INVX1_23/A
+     67.8 ps     _66_:   INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_:  NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:    INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_:  NAND2X1_7/Y ->   NOR2X1_46/B
+   1098.4 ps    _318_:  NOR2X1_46/Y ->   NOR2X1_47/B
+   1229.0 ps    _319_:  NOR2X1_47/Y ->  AOI21X1_33/C
+   1296.5 ps  _14__4_: AOI21X1_33/Y -> DFFPOSX1_61/D
+
+   setup at destination = 190.203
+
+Path input pin addr[3] to DFFPOSX1_64/D delay 1486.44 ps
+      0.6 ps  addr[3]:              ->    INVX1_23/A
+     67.8 ps     _66_:   INVX1_23/Y ->   NAND2X1_6/B
+    229.8 ps     _67_:  NAND2X1_6/Y ->     INVX2_2/A
+    339.6 ps     _68_:    INVX2_2/Y ->   NAND2X1_7/B
+    622.3 ps     _69_:  NAND2X1_7/Y ->   NOR2X1_46/B
+   1098.6 ps    _318_:  NOR2X1_46/Y ->   NOR2X1_48/B
+   1228.4 ps    _320_:  NOR2X1_48/Y ->  AOI21X1_34/C
+   1296.2 ps  _14__7_: AOI21X1_34/Y -> DFFPOSX1_64/D
+
+   setup at destination = 190.191
+
+Path input pin addr[0] to DFFPOSX1_120/D delay 1463.07 ps
+      0.8 ps  addr[0]:             ->     INVX1_24/A
+     67.6 ps     _70_:  INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_: NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_: NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:   INVX2_5/Y ->    NOR2X1_28/B
+   1054.6 ps    _273_: NOR2X1_28/Y ->    MUX2X1_19/S
+   1267.0 ps   _6__7_: MUX2X1_19/Y -> DFFPOSX1_120/D
+
+   setup at destination = 196.112
+
+Path input pin addr[0] to DFFPOSX1_117/D delay 1461.24 ps
+      0.8 ps  addr[0]:             ->     INVX1_24/A
+     67.6 ps     _70_:  INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_: NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_: NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:   INVX2_5/Y ->    NOR2X1_28/B
+   1048.2 ps    _273_: NOR2X1_28/Y ->    MUX2X1_18/S
+   1265.6 ps   _6__4_: MUX2X1_18/Y -> DFFPOSX1_117/D
+
+   setup at destination = 195.637
+
+Path input pin addr[0] to DFFPOSX1_118/D delay 1446.93 ps
+      0.8 ps  addr[0]:              ->     INVX1_24/A
+     67.6 ps     _70_:   INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_:  NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_:  NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:    INVX2_5/Y ->    NOR2X1_28/B
+   1052.2 ps    _273_:  NOR2X1_28/Y ->    NOR2X1_33/B
+   1186.0 ps    _278_:  NOR2X1_33/Y ->   AOI21X1_21/C
+   1257.0 ps   _6__5_: AOI21X1_21/Y -> DFFPOSX1_118/D
+
+   setup at destination = 189.954
+
+Path input pin addr[0] to DFFPOSX1_115/D delay 1446.62 ps
+      0.8 ps  addr[0]:              ->     INVX1_24/A
+     67.6 ps     _70_:   INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_:  NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_:  NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:    INVX2_5/Y ->    NOR2X1_28/B
+   1049.1 ps    _273_:  NOR2X1_28/Y ->    NOR2X1_31/B
+   1186.0 ps    _276_:  NOR2X1_31/Y ->   AOI21X1_19/C
+   1256.7 ps   _6__2_: AOI21X1_19/Y -> DFFPOSX1_115/D
+
+   setup at destination = 189.968
+
+Path input pin addr[0] to DFFPOSX1_114/D delay 1446.43 ps
+      0.8 ps  addr[0]:              ->     INVX1_24/A
+     67.6 ps     _70_:   INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_:  NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_:  NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:    INVX2_5/Y ->    NOR2X1_28/B
+   1052.7 ps    _273_:  NOR2X1_28/Y ->    NOR2X1_30/B
+   1186.4 ps    _275_:  NOR2X1_30/Y ->   AOI21X1_18/C
+   1256.4 ps   _6__1_: AOI21X1_18/Y -> DFFPOSX1_114/D
+
+   setup at destination = 189.991
+
+Path input pin addr[0] to DFFPOSX1_113/D delay 1446.3 ps
+      0.8 ps  addr[0]:              ->     INVX1_24/A
+     67.6 ps     _70_:   INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_:  NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_:  NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:    INVX2_5/Y ->    NOR2X1_28/B
+   1051.2 ps    _273_:  NOR2X1_28/Y ->    NOR2X1_29/B
+   1186.7 ps    _274_:  NOR2X1_29/Y ->   AOI21X1_17/C
+   1256.3 ps   _6__0_: AOI21X1_17/Y -> DFFPOSX1_113/D
+
+   setup at destination = 190.007
+
+Path input pin addr[0] to DFFPOSX1_119/D delay 1445.77 ps
+      0.8 ps  addr[0]:              ->     INVX1_24/A
+     67.6 ps     _70_:   INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_:  NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_:  NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:    INVX2_5/Y ->    NOR2X1_28/B
+   1054.0 ps    _273_:  NOR2X1_28/Y ->    NOR2X1_34/B
+   1186.0 ps    _279_:  NOR2X1_34/Y ->   AOI21X1_22/C
+   1255.8 ps   _6__6_: AOI21X1_22/Y -> DFFPOSX1_119/D
+
+   setup at destination = 190.006
+
+Path input pin addr[0] to DFFPOSX1_116/D delay 1445.77 ps
+      0.8 ps  addr[0]:              ->     INVX1_24/A
+     67.6 ps     _70_:   INVX1_24/Y ->    NAND2X1_9/B
+    181.3 ps     _76_:  NAND2X1_9/Y ->    NOR2X1_12/B
+    424.2 ps    _102_:  NOR2X1_12/Y ->      INVX2_5/A
+    561.5 ps    _175_:    INVX2_5/Y ->    NOR2X1_28/B
+   1054.3 ps    _273_:  NOR2X1_28/Y ->    NOR2X1_32/B
+   1186.0 ps    _277_:  NOR2X1_32/Y ->   AOI21X1_20/C
+   1255.8 ps   _6__3_: AOI21X1_20/Y -> DFFPOSX1_116/D
+
+   setup at destination = 190.006
+
+Path input pin addr[3] to DFFPOSX1_53/D delay 1421.47 ps
+      0.6 ps  addr[3]:              ->    INVX1_23/A
+     67.8 ps     _66_:   INVX1_23/Y ->   NAND2X1_6/B
+    229.5 ps     _67_:  NAND2X1_6/Y ->    NOR2X1_8/B
+    579.3 ps     _92_:   NOR2X1_8/Y ->  NAND2X1_59/B
+   1038.9 ps    _322_: NAND2X1_59/Y ->   MUX2X1_68/S
+   1226.2 ps  _13__4_:  MUX2X1_68/Y -> DFFPOSX1_53/D
+
+   setup at destination = 195.231
+
+Path input pin addr[3] to DFFPOSX1_56/D delay 1420.64 ps
+      0.6 ps  addr[3]:              ->    INVX1_23/A
+     67.8 ps     _66_:   INVX1_23/Y ->   NAND2X1_6/B
+    229.5 ps     _67_:  NAND2X1_6/Y ->    NOR2X1_8/B
+    579.3 ps     _92_:   NOR2X1_8/Y ->  NAND2X1_59/B
+   1038.9 ps    _322_: NAND2X1_59/Y ->   MUX2X1_71/S
+   1225.8 ps  _13__7_:  MUX2X1_71/Y -> DFFPOSX1_56/D
+
+   setup at destination = 194.884
+
+Path input pin addr[3] to DFFPOSX1_50/D delay 1420.29 ps
+      0.6 ps  addr[3]:              ->    INVX1_23/A
+     67.8 ps     _66_:   INVX1_23/Y ->   NAND2X1_6/B
+    229.5 ps     _67_:  NAND2X1_6/Y ->    NOR2X1_8/B
+    579.3 ps     _92_:   NOR2X1_8/Y ->  NAND2X1_59/B
+   1038.6 ps    _322_: NAND2X1_59/Y ->   MUX2X1_65/S
+   1225.6 ps  _13__1_:  MUX2X1_65/Y -> DFFPOSX1_50/D
+
+   setup at destination = 194.74
+
+Path input pin addr[3] to DFFPOSX1_55/D delay 1420.09 ps
+      0.6 ps  addr[3]:              ->    INVX1_23/A
+     67.8 ps     _66_:   INVX1_23/Y ->   NAND2X1_6/B
+    229.5 ps     _67_:  NAND2X1_6/Y ->    NOR2X1_8/B
+    579.3 ps     _92_:   NOR2X1_8/Y ->  NAND2X1_59/B
+   1038.6 ps    _322_: NAND2X1_59/Y ->   MUX2X1_70/S
+   1225.4 ps  _13__6_:  MUX2X1_70/Y -> DFFPOSX1_55/D
+
+   setup at destination = 194.655
+
+-----------------------------------------
+
+Number of paths analyzed:  280
+
+Top 20 minimum delay paths:
+Path input pin rst_n to DFFSR_3/R delay 11.9195 ps
+      0.7 ps  rst_n:   -> DFFSR_3/R
+
+   hold at destination = 11.25
+
+Path input pin rst_n to DFFSR_1/R delay 12.4398 ps
+      1.2 ps  rst_n:   -> DFFSR_1/R
+
+   hold at destination = 11.25
+
+Path input pin rst_n to DFFSR_4/R delay 13.2317 ps
+      2.0 ps  rst_n:   -> DFFSR_4/R
+
+   hold at destination = 11.25
+
+Path input pin rst_n to DFFSR_2/R delay 13.3669 ps
+      2.1 ps  rst_n:   -> DFFSR_2/R
+
+   hold at destination = 11.25
+
+Path input pin rst_n to DFFSR_6/R delay 14.5899 ps
+      3.3 ps  rst_n:   -> DFFSR_6/R
+
+   hold at destination = 11.25
+
+Path input pin rst_n to DFFSR_5/R delay 14.6567 ps
+      3.4 ps  rst_n:   -> DFFSR_5/R
+
+   hold at destination = 11.25
+
+Path input pin rst_n to DFFSR_7/R delay 14.8112 ps
+      3.6 ps  rst_n:   -> DFFSR_7/R
+
+   hold at destination = 11.25
+
+Path input pin rst_n to DFFSR_8/R delay 14.9142 ps
+      3.7 ps  rst_n:   -> DFFSR_8/R
+
+   hold at destination = 11.25
+
+Path input pin din[5] to DFFPOSX1_126/D delay 132.549 ps
+      0.4 ps  din[5]:              ->      INVX8_7/A
+     89.0 ps    _40_:    INVX8_7/Y ->   AOI21X1_14/A
+    136.2 ps  _7__5_: AOI21X1_14/Y -> DFFPOSX1_126/D
+
+   hold at destination = -3.64157
+
+Path input pin din[7] to DFFPOSX1_128/D delay 133.02 ps
+      0.3 ps  din[7]:              ->      INVX8_1/A
+     83.0 ps    _18_:    INVX8_1/Y ->   AOI21X1_16/A
+    136.6 ps  _7__7_: AOI21X1_16/Y -> DFFPOSX1_128/D
+
+   hold at destination = -3.62223
+
+Path input pin din[0] to DFFPOSX1_121/D delay 133.218 ps
+      0.3 ps  din[0]:             ->      INVX8_2/A
+     84.2 ps    _26_:   INVX8_2/Y ->    AOI21X1_9/A
+    136.9 ps  _7__0_: AOI21X1_9/Y -> DFFPOSX1_121/D
+
+   hold at destination = -3.64687
+
+Path input pin din[5] to DFFPOSX1_94/D delay 133.28 ps
+      0.4 ps  din[5]:              ->     INVX8_7/A
+     91.6 ps    _40_:    INVX8_7/Y ->  AOI21X1_30/A
+    136.9 ps  _3__5_: AOI21X1_30/Y -> DFFPOSX1_94/D
+
+   hold at destination = -3.58391
+
+Path input pin din[7] to DFFPOSX1_96/D delay 133.326 ps
+      0.3 ps  din[7]:              ->     INVX8_1/A
+     85.3 ps    _18_:    INVX8_1/Y ->  AOI21X1_32/A
+    136.9 ps  _3__7_: AOI21X1_32/Y -> DFFPOSX1_96/D
+
+   hold at destination = -3.59802
+
+Path input pin din[7] to DFFPOSX1_64/D delay 133.518 ps
+      0.3 ps   din[7]:              ->     INVX8_1/A
+     83.2 ps     _18_:    INVX8_1/Y ->  AOI21X1_34/A
+    137.1 ps  _14__7_: AOI21X1_34/Y -> DFFPOSX1_64/D
+
+   hold at destination = -3.5831
+
+Path input pin din[7] to DFFPOSX1_112/D delay 133.68 ps
+      0.3 ps  din[7]:              ->      INVX8_1/A
+     80.1 ps    _18_:    INVX8_1/Y ->   AOI21X1_24/A
+    137.3 ps  _5__7_: AOI21X1_24/Y -> DFFPOSX1_112/D
+
+   hold at destination = -3.57015
+
+Path input pin din[0] to DFFPOSX1_113/D delay 133.716 ps
+      0.3 ps  din[0]:              ->      INVX8_2/A
+     84.7 ps    _26_:    INVX8_2/Y ->   AOI21X1_17/A
+    137.3 ps  _6__0_: AOI21X1_17/Y -> DFFPOSX1_113/D
+
+   hold at destination = -3.60788
+
+Path input pin din[4] to DFFPOSX1_61/D delay 133.716 ps
+      0.5 ps   din[4]:              ->     INVX8_6/A
+     82.2 ps     _38_:    INVX8_6/Y ->  AOI21X1_33/A
+    137.3 ps  _14__4_: AOI21X1_33/Y -> DFFPOSX1_61/D
+
+   hold at destination = -3.60488
+
+Path input pin din[4] to DFFPOSX1_109/D delay 133.854 ps
+      0.5 ps  din[4]:              ->      INVX8_6/A
+     84.7 ps    _38_:    INVX8_6/Y ->   AOI21X1_23/A
+    137.4 ps  _5__4_: AOI21X1_23/Y -> DFFPOSX1_109/D
+
+   hold at destination = -3.59422
+
+Path input pin din[0] to DFFPOSX1_89/D delay 133.931 ps
+      0.3 ps  din[0]:              ->     INVX8_2/A
+     84.0 ps    _26_:    INVX8_2/Y ->  AOI21X1_25/A
+    137.5 ps  _3__0_: AOI21X1_25/Y -> DFFPOSX1_89/D
+
+   hold at destination = -3.59105
+
+Path input pin din[4] to DFFPOSX1_93/D delay 133.953 ps
+      0.5 ps  din[4]:              ->     INVX8_6/A
+     83.8 ps    _38_:    INVX8_6/Y ->  AOI21X1_29/A
+    137.5 ps  _3__4_: AOI21X1_29/Y -> DFFPOSX1_93/D
+
+   hold at destination = -3.58608
+
+-----------------------------------------
+

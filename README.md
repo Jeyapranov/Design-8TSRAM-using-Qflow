@@ -61,3 +61,7 @@ This repository showcases the complete digital implementation of an **8-Transist
 ├── synthesis/          # Yosys synthesis reports
 └── README.md           # Project documentation
 ```
+### 🧭 Reference
+
+Open Circuit Design - http://opencircuitdesign.com
+check it out for more info and more open source EDA tools...
